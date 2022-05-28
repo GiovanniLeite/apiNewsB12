@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+    news_strap_api:
+        container_name: news_strap_api
+        hostname: news_strap_api
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: senha
+            POSTGRES_DB: news-strapi
+            PGDATA: /var/lib/postgresql1/data/pgdata
+        volumes:
+            - ~/.PostgressData/postgresonly/news_strapi_api:/var/lib/postgresql/data/pgdata
+        ports:
+            - 5432:5432

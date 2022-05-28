@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "readers",
+  "info": {
+    "name": "Readers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "subscription": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
